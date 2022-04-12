@@ -39,6 +39,7 @@ class Block {
         let self = this;
         return new Promise((resolve, reject) => {
             const blockHash = self.hash
+            self.hash = null
             const hash = SHA256(JSON.stringify(self))
 
             resolve(hash === blockHash)
