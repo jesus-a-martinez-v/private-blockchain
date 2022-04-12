@@ -56,7 +56,6 @@ class Block {
      */
     getBData() {
         if (this.height === 0) {
-            // Genesis block
             throw new Error('Cannot return data from the Genesis Block')
         }
 

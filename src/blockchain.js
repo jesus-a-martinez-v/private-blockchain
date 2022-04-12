@@ -4,7 +4,7 @@
  *  It uses libraries like `crypto-js` to create the hashes for each block and `bitcoinjs-message`
  *  to verify a message signature. The chain is stored in the array
  *  `this.chain = [];`. Of course each time you run the application the chain will be empty because and array
- *  isn't a persisten storage method.
+ *  isn't a persistent storage method.
  *
  */
 
@@ -14,15 +14,6 @@ const bitcoinMessage = require('bitcoinjs-message');
 const e = require("express");
 
 class Blockchain {
-
-    /**
-     * Constructor of the class, you will need to setup your chain array and the height
-     * of your chain (the length of your chain array).
-     * Also everytime you create a Blockchain class you will need to initialized the chain creating
-     * the Genesis Block.
-     * The methods in this class will always return a Promise to allow client applications or
-     * other backends to call asynchronous functions.
-     */
     constructor() {
         this.chain = [];
         this.height = -1;
